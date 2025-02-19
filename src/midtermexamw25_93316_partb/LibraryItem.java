@@ -3,7 +3,7 @@ package midtermexamw25_93316_partb;
 import java.util.Scanner;
 
 public class LibraryItem {
-
+//add
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
