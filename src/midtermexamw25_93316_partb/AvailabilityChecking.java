@@ -6,6 +6,9 @@ public class AvailabilityChecking {
 
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
+        if (!bookAvailability[index]){
+            return false;
+        }
         return true;
     }
 
