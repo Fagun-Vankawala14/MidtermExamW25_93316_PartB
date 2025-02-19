@@ -2,6 +2,8 @@ package midtermexamw25_93316_partb;
 
 import java.util.Scanner;
 
+// Lakhwinder Kaur 991776498
+
 public class LibraryItem {
 
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
