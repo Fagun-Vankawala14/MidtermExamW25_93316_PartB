@@ -1,5 +1,11 @@
 package midtermexamw25_93316_partb;
+/**
+ * @author Ayushi Goswami
+ * StudentID: 991752568
+ email:goswamay@sheridancollege.ca
+ date:2025/02/19
 
+ */
 import java.util.Scanner;
 
 public class LibraryItem {
