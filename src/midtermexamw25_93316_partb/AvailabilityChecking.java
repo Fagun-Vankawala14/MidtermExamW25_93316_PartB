@@ -1,16 +1,18 @@
-/*Editor : Dong Nguyen 
-  991756472
+/*Editor : Mir Ali
+991588037
 */
 
 package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
 
-    private static boolean[] bookAvailability = {true, true, true, true};
+    private static boolean[] bookAvailability = { true, true, true, true };
 
     public boolean isBookAvailable(int index) {
-        //Complete this method to check book availability
-        return true;
+        if (index >= 0 && index < bookAvailability.length) {
+            return bookAvailability[index];
+        }
+        return false; // If index is out of range, return false
     }
 
     public void borrowBook(int index) {
