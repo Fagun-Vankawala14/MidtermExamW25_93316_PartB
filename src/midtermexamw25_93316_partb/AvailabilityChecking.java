@@ -10,9 +10,12 @@ public class AvailabilityChecking {
     private static boolean[] bookAvailability = {true, true, true, true};
 
     public boolean isBookAvailable(int index) {
-        //Complete this method to check book availability
-        return true;
+    if (index >= 0 && index < bookAvailability.length) {
+        return bookAvailability[index]; // Return true if book is available
     }
+    return false;
+}
+
 
     public void borrowBook(int index) {
         if (isBookAvailable(index)) {
