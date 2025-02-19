@@ -5,14 +5,19 @@
 package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
-
-    private static boolean[] bookAvailability = {true, true, true, true};
+    protected static boolean[] bookAvailability = {true, true, true, true};
 
     public boolean isBookAvailable(int index) {
-    if (index >= 0 && index < bookAvailability.length) {
-        return bookAvailability[index];
+        if (index >= 0 && index < bookAvailability.length) {
+            return bookAvailability[index];
+        }
+        return false;
     }
-    return false; // If index is invalid, return false
+
+    // OCP: We are keeping the original class unchanged but allowing extension.
+    public static String getBookAvailability(int index) {
+        return (index >= 0 && index < bookAvailability.length && bookAvailability[index]) ? "Available" : "Not Available";
+    }
 }
 
 
