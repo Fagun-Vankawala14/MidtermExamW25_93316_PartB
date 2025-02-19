@@ -3,16 +3,23 @@ package midtermexamw25_93316_partb;
 import java.util.Scanner;
 
 public class LibraryItem {
-
-    private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
+//    Here added the title of the book and author according to the book class created earlier.
+//    Added the Book class to encapsulate book properties, improve cohesion.
+    private static Book[] books = {
+        new Book("The Great Gatsby", "ABC1"),
+        new Book("1984", "ABC2"),
+        new Book("To Kill a Mockingbird", "ABC3"),
+        new Book("The Catcher in the Rye", "ABC4")
+    };
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
-
+    
+//  Changed displayCatalog() to show both the title and author of each book
+//  It will improve the user experience and add clarity.
     public void displayCatalog() {
         for (int i = 0; i < books.length; i++) {
-            System.out.println((i + 1) + ". " + books[i]);
+        System.out.println((i + 1) + ". " + books[i].getTitle() + " written by " + books[i].getAuthor());
         }
     }
-
 
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");
