@@ -38,14 +38,15 @@ public class LibraryItem {
     }
 
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LibraryItem libraryItem = new LibraryItem(); // Create an instance of LibraryItem
-        boolean continueBorrowing = true;
+        AvailabilityChecking checker = new AvailabilityChecking(); // Create an instance separately (Loose Coupling)
+        LibraryItem libraryItem = new LibraryItem(checker); // Inject dependency
 
+        boolean continueBorrowing = true;
         while (continueBorrowing) {
             libraryItem.displayCatalog();
-            libraryItem.selectBook(sc); 
+            libraryItem.selectBook(sc);
 
             System.out.print("\nWould you like to borrow another book? (yes/no): ");
             String response = sc.next().trim().toLowerCase();
@@ -56,3 +57,4 @@ public class LibraryItem {
         sc.close();
     }
 }
+
