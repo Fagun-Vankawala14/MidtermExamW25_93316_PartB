@@ -9,11 +9,16 @@ public class LibraryItem {
 
     public void displayCatalog() {
     System.out.println("Welcome to the library! Here is a list of available books:");
-
+    
     for (int i = 0; i < books.length; i++) {
-        String availability = availabilityChecker.isBookAvailable(i) ? "Available" : "Not Available";
+        String availability = AvailabilityChecking.getBookAvailability(i);
         System.out.println((i + 1) + ". " + books[i] + " - " + availability);
     }
+}
+
+// SRP: The LibraryItem class should not be responsible for checking availability.
+// Now, availability checking is moved to the AvailabilityChecking class.
+
 }
 
     public void selectBook(Scanner sc) {
