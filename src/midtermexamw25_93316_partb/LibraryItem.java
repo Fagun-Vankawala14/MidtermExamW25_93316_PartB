@@ -2,6 +2,13 @@ package midtermexamw25_93316_partb;
 
 import java.util.Scanner;
 
+/**
+ * LibraryItem class implements the Single Responsibility Principle
+ * by handling book information and user interaction.
+ * 
+ * Responsibility: Managing book catalog and user interactions for the library system.
+ */
+
 public class LibraryItem {
 
     private static String[] books = { "The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye" };
