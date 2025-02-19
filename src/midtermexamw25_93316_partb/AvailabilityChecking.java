@@ -7,6 +7,11 @@ public class AvailabilityChecking {
 
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
+        if ( index >= 0 && index <bookAvailability.length) {
+            return bookAvailability[index]; 
+        }
+         
+    
         return true;
     }
 
