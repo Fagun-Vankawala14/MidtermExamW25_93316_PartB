@@ -9,10 +9,15 @@ public class LibraryItem {
 
     public void displayCatalog() {
         System.out.println("Welcome to the library! Here is a list of available books:");
-        System.out.println("Rise and Shine");
-        System.out.println("Rich Dad Poor Dad");
-        System.out.println("The Merchant of Venice");
+        for (String book : books) {
+        System.out.println("- " + book);
     }
+}
+
+       
+        
+
+   
 
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");
