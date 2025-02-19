@@ -1,3 +1,4 @@
+//initial Commit
 package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
