@@ -4,7 +4,7 @@ package midtermexamw25_93316_partb;
 /*
 
 Author: jay Patel
-*/
+ */
 import java.util.Scanner;
 
 public class LibraryItem {
@@ -16,8 +16,8 @@ public class LibraryItem {
         System.out.println("Welcome to the library! Here is a list of available books:");
         //Comaplete this method to display list of books
         for (int i = 0; i < books.length; i++) {
-        System.out.println((i + 1) + ". " + books[i]);
-    }
+            System.out.println((i + 1) + ". " + books[i]);
+        }
 
     }
 
@@ -45,7 +45,7 @@ public class LibraryItem {
 
         while (continueBorrowing) {
             libraryItem.displayCatalog();
-            libraryItem.selectBook(sc); 
+            libraryItem.selectBook(sc);
 
             System.out.print("\nWould you like to borrow another book? (yes/no): ");
             String response = sc.next().trim().toLowerCase();
