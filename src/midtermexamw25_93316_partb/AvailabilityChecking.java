@@ -1,7 +1,13 @@
 /*Editor : Mir Ali
 991588037
 */
-
+/**
+ * AvailabilityChecking class implements the Single Responsibility Principle
+ * by focusing solely on managing the availability status of books.
+ * 
+ * Responsibility: Managing and tracking the availability status of books
+ * in the library system.
+ */
 package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
