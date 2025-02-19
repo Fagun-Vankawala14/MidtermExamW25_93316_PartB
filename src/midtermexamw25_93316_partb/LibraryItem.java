@@ -13,10 +13,6 @@ public class LibraryItem {
         System.out.println("- " + book);
     }
 }
-
-       
-        
-
    
 
     public void selectBook(Scanner sc) {
