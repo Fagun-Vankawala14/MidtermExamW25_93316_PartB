@@ -1,5 +1,10 @@
 package midtermexamw25_93316_partb;
 
+
+/*
+
+Author: jay Patel
+*/
 import java.util.Scanner;
 
 public class LibraryItem {

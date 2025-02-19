@@ -1,5 +1,9 @@
 package midtermexamw25_93316_partb;
 
+/*
+
+Author: jay Patel
+*/
 public class AvailabilityChecking {
 
     private static boolean[] bookAvailability = {true, true, true, true};
