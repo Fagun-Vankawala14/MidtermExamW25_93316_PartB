@@ -4,9 +4,11 @@ public class AvailabilityChecking {
 
     private static boolean[] bookAvailability = {true, true, true, true};
 
-    public boolean isBookAvailable(int index) {
-        //Complete this method to check book availability
-        return true;
+      public boolean isBookAvailable(int index) {
+    if (index >= 0 && index < bookAvailability.length) {
+        return bookAvailability[index];
+    }
+    return false; // Returns false if index is out of range
     }
 
     public void borrowBook(int index) {
@@ -20,4 +22,6 @@ public class AvailabilityChecking {
             bookAvailability[index] = true;
         }
     }
+    
+     
 }
