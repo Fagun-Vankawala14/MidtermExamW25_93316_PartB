@@ -5,14 +5,15 @@ import java.util.Scanner;
 public class LibraryItem {
 
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
-    private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
+    private AvailabilityChecking availabilityChecker = new AvailabilityChecking(); 
 
+    // Applied **Encapsulation**: Data (books) is private, only accessible through methods.
     public void displayCatalog() {
-    System.out.println("Welcome to the library! Here is a list of available books:");
-    for (int i = 0; i < books.length; i++) {
-        System.out.println((i + 1) + ". " + books[i]);
+        System.out.println("Welcome to the library! Here is a list of available books:");
+        for (int i = 0; i < books.length; i++) {
+            System.out.println((i + 1) + ". " + books[i]);
+        }
     }
-}
 
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");
@@ -23,9 +24,10 @@ public class LibraryItem {
             return;
         }
 
+        // Applied **SRP**: Availability logic is handled by AvailabilityChecking, not here.
         if (availabilityChecker.isBookAvailable(choice)) {
             System.out.println("You selected: " + books[choice] + ". Enjoy your reading!");
-            availabilityChecker.borrowBook(choice); // Updates availability in AvailabilityChecking
+            availabilityChecker.borrowBook(choice);
         } else {
             System.out.println("Sorry, " + books[choice] + " is currently unavailable. Please select another book.");
         }
@@ -33,7 +35,7 @@ public class LibraryItem {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LibraryItem libraryItem = new LibraryItem(); // Create an instance of LibraryItem
+        LibraryItem libraryItem = new LibraryItem(); 
         boolean continueBorrowing = true;
 
         while (continueBorrowing) {
