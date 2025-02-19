@@ -6,7 +6,11 @@ public class AvailabilityChecking {
 
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
-        return true;
+        if (index >= 0 && index < bookAvailability.length) {
+            return bookAvailability[index];
+        } else {
+            return false;
+        }
     }
 
     public void borrowBook(int index) {
