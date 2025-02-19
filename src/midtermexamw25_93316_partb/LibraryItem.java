@@ -17,7 +17,6 @@ public class LibraryItem {
         System.out.println((i + 1) + ". " + books[i] + " - " + status);
     }
 }
-
  //Comaplete this method to display list of books
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");

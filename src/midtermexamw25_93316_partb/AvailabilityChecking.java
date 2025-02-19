@@ -6,7 +6,8 @@ public class AvailabilityChecking {
 
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
-        return true;
+        
+        return index>=0 && index< bookAvailability.length&& bookAvailability[index];
     }
 
     public void borrowBook(int index) {
@@ -21,3 +22,4 @@ public class AvailabilityChecking {
         }
     }
 }
+
