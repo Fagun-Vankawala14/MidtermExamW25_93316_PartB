@@ -8,8 +8,11 @@ public class LibraryItem {
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
     public void displayCatalog() {
-        System.out.println("Welcome to the library! Here is a list of available books:");
-        //Comaplete this method to display list of books
+        System.out.println("\nWelcome to the library! Here is a list of available books:");
+        for (int i = 0; i < books.length; i++) {
+            String availability = availabilityChecker.isBookAvailable(i) ? "Available" : "Unavailable";
+            System.out.println((i + 1) + ". " + books[i] + " - " + availability);
+        }
     }
 
     public void selectBook(Scanner sc) {
@@ -23,7 +26,7 @@ public class LibraryItem {
 
         if (availabilityChecker.isBookAvailable(choice)) {
             System.out.println("You selected: " + books[choice] + ". Enjoy your reading!");
-            availabilityChecker.borrowBook(choice); // Updates availability in AvailabilityChecking
+            availabilityChecker.borrowBook(choice);
         } else {
             System.out.println("Sorry, " + books[choice] + " is currently unavailable. Please select another book.");
         }
@@ -31,12 +34,12 @@ public class LibraryItem {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LibraryItem libraryItem = new LibraryItem(); // Create an instance of LibraryItem
+        LibraryItem libraryItem = new LibraryItem();
         boolean continueBorrowing = true;
 
         while (continueBorrowing) {
             libraryItem.displayCatalog();
-            libraryItem.selectBook(sc); 
+            libraryItem.selectBook(sc);
 
             System.out.print("\nWould you like to borrow another book? (yes/no): ");
             String response = sc.next().trim().toLowerCase();
