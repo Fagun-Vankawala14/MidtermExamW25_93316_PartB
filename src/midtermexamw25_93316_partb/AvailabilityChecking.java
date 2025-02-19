@@ -1,29 +1,27 @@
 //initial Commit
 package midtermexamw25_93316_partb;
 
+// Manages book availability (Loose Coupling: Uses Book class)
 public class AvailabilityChecking {
+    private Book[] books; // Loose Coupling: Uses Book class
 
-    private static boolean[] bookAvailability = {true, true, true, true};
+    public AvailabilityChecking(Book[] books) {
+        this.books = books;
+    }
 
     public boolean isBookAvailable(int index) {
-        //Complete this method to check book availability
-        if ( index >= 0 && index <bookAvailability.length) {
-            return bookAvailability[index]; 
-        }
-         
-    
-        return true;
+        return index >= 0 && index < books.length && books[index].isAvailable();
     }
 
     public void borrowBook(int index) {
         if (isBookAvailable(index)) {
-            bookAvailability[index] = false;
+            books[index].borrowBook();
         }
     }
 
     public void returnBook(int index) {
-        if (index >= 0 && index < bookAvailability.length) {
-            bookAvailability[index] = true;
+        if (index >= 0 && index < books.length) {
+            books[index].returnBook();
         }
     }
 }
