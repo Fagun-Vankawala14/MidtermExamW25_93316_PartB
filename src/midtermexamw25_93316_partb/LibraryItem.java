@@ -7,12 +7,8 @@ public class LibraryItem {
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
-    public void displayCatalog() {
-        System.out.println("Welcome to the library! Here is a list of available books:");
-        for (int i = 0; i < books.length; i++) {  
-        System.out.println((i + 1) + ". " + books[i]);
-    }
-    }
+    
+    
 
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");
@@ -32,12 +28,16 @@ public class LibraryItem {
     }
 
     public static void main(String[] args) {
+         
+        LibraryCatalog catalog = new LibraryCatalog();  
+        catalog.displayCatalog(); 
+    
         Scanner sc = new Scanner(System.in);
         LibraryItem libraryItem = new LibraryItem(); // Create an instance of LibraryItem
         boolean continueBorrowing = true;
 
         while (continueBorrowing) {
-            libraryItem.displayCatalog();
+            
             libraryItem.selectBook(sc); 
 
             System.out.print("\nWould you like to borrow another book? (yes/no): ");
