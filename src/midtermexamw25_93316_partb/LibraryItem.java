@@ -4,16 +4,27 @@ import java.util.Scanner;
 
 public class LibraryItem {
 
-    private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
+    private static String[] books = {
+        "The Great Gatsby", 
+        "1984", 
+        "To Kill a Mockingbird", 
+        "The Catcher in the Rye"
+    };
+
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
+    // Method to display the catalog of available books
     public void displayCatalog() {
-        System.out.println("Welcome to the library! Here is a list of available books:");
-        //Comaplete this method to display list of books
+        System.out.println("\nWelcome to the library! Here is a list of available books:");
+        for (int i = 0; i < books.length; i++) {
+            System.out.println((i + 1) + ". " + books[i] + 
+                (availabilityChecker.isBookAvailable(i) ? " (Available)" : " (Not Available)"));
+        }
     }
 
+    // Method to select and borrow a book
     public void selectBook(Scanner sc) {
-        System.out.print("\nEnter the Book number which you want to borrow: ");
+        System.out.print("\nEnter the book number you want to borrow: ");
         int choice = sc.nextInt() - 1;
 
         if (choice < 0 || choice >= books.length) {
@@ -31,12 +42,12 @@ public class LibraryItem {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LibraryItem libraryItem = new LibraryItem(); // Create an instance of LibraryItem
+        LibraryItem libraryItem = new LibraryItem();
         boolean continueBorrowing = true;
 
         while (continueBorrowing) {
             libraryItem.displayCatalog();
-            libraryItem.selectBook(sc); 
+            libraryItem.selectBook(sc);
 
             System.out.print("\nWould you like to borrow another book? (yes/no): ");
             String response = sc.next().trim().toLowerCase();
