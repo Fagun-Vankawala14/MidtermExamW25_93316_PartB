@@ -1,7 +1,7 @@
 package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
-
+//created new branch initial commit
     private static boolean[] bookAvailability = {true, true, true, true};
 
     public boolean isBookAvailable(int index) {
