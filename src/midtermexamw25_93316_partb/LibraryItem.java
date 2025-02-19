@@ -5,7 +5,12 @@ import java.util.Scanner;
 public class LibraryItem {
 
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
-    private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
+    private AvailabilityChecking availabilityChecker;
+
+    // Constructor with Dependency Injection (Loose Coupling)
+    public LibraryItem(AvailabilityChecking checker) {
+        this.availabilityChecker = checker;
+    }
 
     public void displayCatalog() {
     System.out.println("Welcome to the library! Here is a list of available books:");
@@ -31,6 +36,7 @@ public class LibraryItem {
             System.out.println("Sorry, " + books[choice] + " is currently unavailable. Please select another book.");
         }
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
