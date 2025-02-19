@@ -1,3 +1,8 @@
+//Author Gourav
+//Studen Id 991775050
+
+
+
 package midtermexamw25_93316_partb;
 
 import java.util.Scanner;
