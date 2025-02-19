@@ -4,12 +4,12 @@ package midtermexamw25_93316_partb;
  * StudentID: 991752568
  email:goswamay@sheridancollege.ca
  date:2025/02/19
-
  */
 public class AvailabilityChecking {
-
+   
     private static boolean[] bookAvailability = {true, true, true, true};
-
+ 
+    // responsible for checking book availability
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
         if (index >= 0 && index < bookAvailability.length) {
@@ -23,6 +23,7 @@ public class AvailabilityChecking {
         }
     }
 
+    //Handles return 
     public void returnBook(int index) {
         if (index >= 0 && index < bookAvailability.length) {
             bookAvailability[index] = true;
