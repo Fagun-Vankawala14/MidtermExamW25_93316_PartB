@@ -2,6 +2,7 @@ package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
 
+    //Here we have made the list of books abd the book availbility statuts private to prevent it from the direct access by the user. Thus, the concept of Encapsulation is used here.
     private static boolean[] bookAvailability = {true, true, true, true};
 
     public boolean isBookAvailable(int index) {
