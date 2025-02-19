@@ -8,9 +8,14 @@ public class LibraryItem {
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
     public void displayCatalog() {
-        System.out.println("Welcome to the library! Here is a list of available books:");
-        //Comaplete this method to display list of books
-    }
+    System.out.println("Book Catalog:");
+    for (String Book : books) {
+        System.out.println("ID: " + book.getId() + 
+                           ", Title: " + book.getTitle() + 
+                           ", Author: " + book.getAuthor());
+    
+            }
+        }
 
     public void selectBook(Scanner sc) {
         System.out.print("\nEnter the Book number which you want to borrow: ");
