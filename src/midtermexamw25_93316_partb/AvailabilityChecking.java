@@ -2,10 +2,14 @@ package midtermexamw25_93316_partb;
 
 public class AvailabilityChecking {
 
-    private static boolean[] bookAvailability = {true, true, true, true};
+    // Applied **Encapsulation**: Made bookAvailability private to restrict direct modification.
+    private boolean[] bookAvailability = {true, true, true, true};
 
-    public boolean isBookAvailable(int index) {
-        return bookAvailability[index]; 
+    public boolean isBookAvailable(int index) { 
+        if (index >= 0 && index < bookAvailability.length) {
+            return bookAvailability[index]; 
+        }
+        return false; 
     }
 
     public void borrowBook(int index) {
