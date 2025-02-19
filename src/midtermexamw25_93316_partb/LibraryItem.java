@@ -10,6 +10,11 @@ public class LibraryItem {
     public void displayCatalog() {
         System.out.println("Welcome to the library! Here is a list of available books:");
         //Comaplete this method to display list of books
+        for(int i = 0; i <books.length;i++)
+        {
+            String status = availabilityChecker.isBookAvailable(i) ? "The book is available in the list" : "The book is not available in the list.";
+            System.out.println((i+1) + books[i] + "-" + status);
+        }
     }
 
     public void selectBook(Scanner sc) {
