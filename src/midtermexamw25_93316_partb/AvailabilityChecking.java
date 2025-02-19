@@ -4,11 +4,12 @@ public class AvailabilityChecking {
 
     private static boolean[] bookAvailability = {true, true, true, true};
 
+    //here Encapsulation is used as in this one it controls the access to the book availability.
     public boolean isBookAvailable(int index) {
         //Complete this method to check book availability
         if (index >=0 && index < bookAvailability.length){
             return bookAvailability[index];}
-        return true;
+        return false;
     }
 
     public void borrowBook(int index) {

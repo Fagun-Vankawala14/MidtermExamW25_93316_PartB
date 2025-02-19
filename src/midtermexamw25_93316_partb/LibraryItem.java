@@ -2,11 +2,16 @@ package midtermexamw25_93316_partb;
 
 import java.util.Scanner;
 
+
 public class LibraryItem {
 
     private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
+   //here Encapsulation method is used with the constructor for dependency injection
+   public LibraryItem(){
+        this.availabilityChecker= new AvailabilityChecking();}
+   
     public void displayCatalog() {
         System.out.println("Welcome to the library! Here is a list of available books:");
         //Comaplete this method to display list of books
