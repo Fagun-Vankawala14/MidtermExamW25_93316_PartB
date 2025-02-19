@@ -3,16 +3,15 @@ package midtermexamw25_93316_partb;
 import java.util.Scanner;
 
 public class LibraryItem {
-    private static String[] books = {
-        "The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"
-    };
+    private static String[] books = {"The Great Gatsby", "1984", "To Kill a Mockingbird", "The Catcher in the Rye"};
     private AvailabilityChecking availabilityChecker = new AvailabilityChecking();
 
-    // Implement displayCatalog() method
+    // SRP: This method now only displays books without handling availability logic.
     public void displayCatalog() {
         System.out.println("\nWelcome to the library! Here is a list of available books:");
         for (int i = 0; i < books.length; i++) {
-            System.out.println((i + 1) + ". " + books[i]);
+            String availability = availabilityChecker.isBookAvailable(i) ? "Available" : "Unavailable";
+            System.out.println((i + 1) + ". " + books[i] + " - " + availability);
         }
     }
 
@@ -26,7 +25,7 @@ public class LibraryItem {
         }
 
         if (availabilityChecker.isBookAvailable(choice)) {
-            System.out.println("Enjoy your book: " + books[choice]);
+            System.out.println("You selected: " + books[choice] + ". Enjoy your reading!");
             availabilityChecker.borrowBook(choice);
         } else {
             System.out.println("Sorry, " + books[choice] + " is currently unavailable. Please select another book.");
