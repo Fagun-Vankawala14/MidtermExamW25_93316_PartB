@@ -5,8 +5,7 @@ public class AvailabilityChecking {
     private static boolean[] bookAvailability = {true, true, true, true};
 
     public boolean isBookAvailable(int index) {
-        //Complete this method to check book availability
-        return true;
+        return bookAvailability[index]; 
     }
 
     public void borrowBook(int index) {
